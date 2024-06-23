@@ -1,0 +1,178 @@
+:root {
+  --dark-color: #1e1e1e;
+  --light-color: #2e2e2e;
+  --text-color: #858585;
+  --active-color: #c6c6c6;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  font-family: Arial;
+  background-color: var(--dark-color);
+  color: var(--text-color);
+}
+
+/* LEFT SIDE */
+#left-side {
+  width: 25%;
+  height: 100vh;
+  float: left;
+  background-color: var(--light-color);
+}
+
+#left-side i {
+  padding-top: 1vh;
+}
+
+#left-side input {
+  padding-top: 0;
+  width: 80%;
+  background-color: none;
+  border: none;
+  outline: none;
+}
+
+#create-input {
+  font-size: 4vh;
+  float: left;
+  margin-left: 5%;
+  margin-top: 3vh;
+  margin-bottom: 4vh;
+  background-color: var(--dark-color);
+  color: var(--active-color);
+}
+
+#add-icon {
+  margin-top: 2vh;
+  font-size: 5vh;
+  margin-bottom: 4vh;
+}
+
+#add-icon:hover {
+  cursor: pointer;
+  color: var(--active-color);
+}
+
+/* RIGHT SIDE */
+#right-side {
+  padding-left: 2%;
+  float: left;
+  display: block;
+  width: 70%;
+  height: 100vh;
+}
+
+#file-right {
+  padding-left: 2%;
+  float: left;
+  display: none;
+  width: 100%;
+  height: 100vh;
+}
+
+#title {
+  width: 75%;
+  float: left;
+  color: var(--active-color);
+}
+
+#save-icon,
+#del-icon,
+#play-icon {
+  font-size: 8vh;
+  margin-top: 2vh;
+  margin-right: 2%;
+  cursor: pointer;
+}
+
+#save-icon:hover,
+#del-icon:hover,
+#play-icon:hover {
+  color: var(--active-color);
+}
+
+textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 5vh;
+  font-family: Arial;
+  height: 80vh;
+  resize: none;
+  background-color: var(--dark-color);
+  color: var(--active-color);
+}
+
+/* FILE LIST */
+.file-name {
+  width: 80%;
+  float: left;
+  font-size: 3vh;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-left: 5%;
+}
+
+.file-icon {
+  float: left;
+  width: 10%;
+  padding-left: 5%;
+  font-size: 5vh;
+}
+
+.file-block:hover p,
+.file-block:hover i {
+  cursor: pointer;
+  color: var(--active-color);
+}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+#image-container {
+  display: none;
+}
+
+#savedots {
+  display: none;
+}
+
+#attention {
+  display: none;
+}

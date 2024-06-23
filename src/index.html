@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="index.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="left-side">
+    <button onclick="pickDir()">Выберете директорию проектов</button>
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'files')">Файл</button>
+      <button class="tablinks" onclick="openCity(event, 'picture')">Картинка</button>
+    </div>
+
+    <!-- Tab content -->
+    <div id="files" class="tabcontent">
+      <h3>Файл</h3>
+      <p>выберете файл с точками для создания модели</p>
+      <input id="create-input" type="text" />
+      <i id="add-icon" onclick="addIconClick()" class="material-icons">add</i>
+    </div>
+
+    <div id="picture" class="tabcontent">
+      <h3>Картинка</h3>
+      <p>Выберете картинку для создания модели</p>
+      <div>
+        <input type="file" accept="image/*" onchange="displayImage(event)">
+
+      </div>
+    </div>
+  </div>
+  <div id="right-side">
+    <div id="image-container">
+      <div id="image">
+
+      </div>
+      <button id="calcDots" onclick="createPoints()">Рассчитать точки</button>
+    </div>
+    <div id="savedots">
+      <textarea name="dots" id="dots"></textarea>
+      <label for="">Напишите название файла</label>
+      <input type="text" id="namedots">
+      <button onclick="saveDots()">Сохранить</button>
+    </div>
+    <p id="attention">Ваш файл сохранен, теперь в разделе файлы вы можете его выбрать</p>
+    <div id="file-right">
+      <h1 id="title"></h1>
+      <i id="play-icon" onclick="playIconClick()" class="material-icons">play_circle</i>
+      <i id="save-icon" onclick="saveIconClick()" class="material-icons">save</i>
+      <i id="del-icon" onclick="delIconClick()" class="material-icons">delete</i>
+      <textarea id="readyDots" oninput="textareaInput()"></textarea>
+    </div>
+
+  </div>
+  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="opencv/opencv.js"></script>
+
+</body>
+
+</html>
